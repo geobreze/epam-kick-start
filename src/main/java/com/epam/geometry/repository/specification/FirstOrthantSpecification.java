@@ -7,8 +7,8 @@ public class FirstOrthantSpecification implements FigureSpecification {
     @Override
     public boolean specified(Figure figure) {
         boolean result = true;
-        for(Point point : figure.getPoints()) {
-            for(double coordinate : point.getCoordinates()) {
+        for (Point point : figure.getPoints()) {
+            for (double coordinate : point.getCoordinates()) {
                 result = result && coordinate >= 0;
             }
         }

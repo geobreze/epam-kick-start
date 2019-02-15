@@ -30,10 +30,10 @@ public class QuadrilateralDirectorTest {
     private static final Reader READER = mock(Reader.class);
     private static final List<Figure> EXPECTED = Arrays.asList(new Quadrilateral(
             ID_GENERATOR,
-            new Point2D(-2,2),
-            new Point2D(3,2),
-            new Point2D(1,-1),
-            new Point2D(-2,-1)));
+            new Point2D(-2, 2),
+            new Point2D(3, 2),
+            new Point2D(1, -1),
+            new Point2D(-2, -1)));
     private final QuadrilateralDirector director = new QuadrilateralDirector(FORMAT_VALIDATOR, FIGURE_VALIDATOR, READER, PARSER);
 
     @BeforeClass

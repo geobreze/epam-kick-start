@@ -17,6 +17,6 @@ public class PerimeterInRangeSpecification implements FigureSpecification {
     @Override
     public boolean specified(Figure figure) {
         double perimeter = logic.countPerimeter(figure);
-        return  perimeter >= min && perimeter <= max;
+        return perimeter >= min && perimeter <= max;
     }
 }

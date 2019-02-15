@@ -6,7 +6,6 @@ import com.epam.geometry.model.Point2D;
 import com.epam.geometry.model.Quadrilateral;
 import com.epam.geometry.repository.specification.FigureSpecification;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Arrays;

@@ -27,7 +27,7 @@ public class FigureSetRepository implements FigureRepository {
 
     @Override
     public void updateFigure(Figure figure) {
-        if(!figures.contains(figure)) {
+        if (!figures.contains(figure)) {
             NullUpdateException nullUpdateException = new NullUpdateException("Repository doesn't store given figure");
             LOGGER.error(nullUpdateException.getMessage(), nullUpdateException);
             throw nullUpdateException;

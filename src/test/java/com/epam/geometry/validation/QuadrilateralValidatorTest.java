@@ -4,7 +4,6 @@ import com.epam.geometry.logic.GeometryAlgorithms;
 import com.epam.geometry.model.Point;
 import com.epam.geometry.model.Point2D;
 import com.epam.geometry.parse.PointsParser;
-import com.epam.geometry.parse.QuadrilateralPointsParser;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

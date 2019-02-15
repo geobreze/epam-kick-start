@@ -8,7 +8,7 @@ public class Quadrilateral extends Figure {
         super(idGenerator, firstPoint, secondPoint, thirdPoint, fourthPoint);
     }
 
-    public void setPoints(Point firstPoint, Point secondPoint, Point thirdPoint,Point fourthPoint) {
+    public void setPoints(Point firstPoint, Point secondPoint, Point thirdPoint, Point fourthPoint) {
         super.setPoints(firstPoint, secondPoint, thirdPoint, fourthPoint);
     }
 

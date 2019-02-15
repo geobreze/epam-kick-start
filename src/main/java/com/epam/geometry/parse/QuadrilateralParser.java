@@ -5,7 +5,6 @@ import com.epam.geometry.generation.IdGenerator;
 import com.epam.geometry.model.Figure;
 import com.epam.geometry.model.Point;
 import com.epam.geometry.model.Quadrilateral;
-import com.epam.geometry.validation.FigureValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

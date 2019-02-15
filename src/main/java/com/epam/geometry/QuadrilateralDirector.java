@@ -36,7 +36,7 @@ public class QuadrilateralDirector implements FigureDirector {
         try {
             List<String> lines = fileReader.read(source);
             for (String line : lines) {
-                if (formatValidator.validate(line)&& quadrilateralValidator.validate(line)) {
+                if (formatValidator.validate(line) && quadrilateralValidator.validate(line)) {
                     quadrilaterals.add(quadrilateralParser.parse(line));
                 }
             }

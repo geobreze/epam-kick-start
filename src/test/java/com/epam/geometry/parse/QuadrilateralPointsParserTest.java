@@ -3,20 +3,15 @@ package com.epam.geometry.parse;
 import com.epam.geometry.exceptions.IllegalParseException;
 import com.epam.geometry.model.Point;
 import com.epam.geometry.model.Point2D;
-import com.epam.geometry.validation.FormatValidator;
-import com.epam.geometry.validation.QuadrilateralFormatValidator;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.mockito.Mockito.*;
 
 @RunWith(DataProviderRunner.class)
 public class QuadrilateralPointsParserTest {

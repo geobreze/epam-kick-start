@@ -6,8 +6,6 @@ import com.epam.geometry.model.Figure;
 import com.epam.geometry.model.Point;
 import com.epam.geometry.model.Point2D;
 import com.epam.geometry.model.Quadrilateral;
-import com.epam.geometry.validation.FigureValidator;
-import com.epam.geometry.validation.QuadrilateralValidator;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;

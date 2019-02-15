@@ -8,7 +8,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 public class FigureObserverTest {
@@ -22,7 +21,7 @@ public class FigureObserverTest {
             new Point2D(1.0, 1.0),
             new Point2D(1.0, -1.0),
             new Point2D(-1.0, -1.0)
-            );
+    );
 
     @BeforeClass
     public static void initGenerator() {
