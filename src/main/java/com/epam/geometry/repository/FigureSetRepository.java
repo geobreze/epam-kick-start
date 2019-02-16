@@ -6,6 +6,7 @@ import com.epam.geometry.repository.specification.FigureSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -39,4 +40,10 @@ public class FigureSetRepository implements FigureRepository {
     public List<Figure> query(FigureSpecification specification) {
         return figures.stream().filter(specification::specified).collect(Collectors.toList());
     }
+
+    @Override
+    public List<Figure> query(FigureSpecification specification, Comparator<Figure> comparator) {
+        return figures.stream().filter(specification::specified).sorted(comparator).collect(Collectors.toList());
+    }
+
 }
