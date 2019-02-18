@@ -33,7 +33,8 @@ public class FigureObserverTest {
         FigureLogic figureLogic = mock(FigureLogic.class);
         when(figureLogic.countSquare(QUADRILATERAL_OBSERVABLE)).thenReturn(TEST_AREA_AND_PERIMETER);
         when(figureLogic.countPerimeter(QUADRILATERAL_OBSERVABLE)).thenReturn(TEST_AREA_AND_PERIMETER);
-        FigureObserver figureObserver = new FigureObserver(figureLogic);
+        FigureObserver.initInstance(figureLogic);
+        FigureObserver figureObserver = FigureObserver.getInstance();
 
         figureObserver.update(QUADRILATERAL_OBSERVABLE);
         FigureParameters actual = figureObserver.getParameters(ID);

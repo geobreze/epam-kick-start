@@ -1,17 +1,42 @@
 package com.epam.geometry.observer;
 
+import com.epam.geometry.exceptions.SingletonException;
 import com.epam.geometry.logic.FigureLogic;
 import com.epam.geometry.model.FigureParameters;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class FigureObserver implements Observer {
-    private final FigureLogic figureLogic;
+    private static final Logger LOGGER = LogManager.getLogger(FigureObserver.class);
     private final Map<Integer, FigureParameters> parametersMap = new HashMap<>();
+    private final FigureLogic figureLogic;
+    private static FigureObserver instance;
 
-    public FigureObserver(FigureLogic figureLogic) {
+    private FigureObserver(FigureLogic figureLogic) {
         this.figureLogic = figureLogic;
+    }
+
+    public static void initInstance(FigureLogic figureLogic) {
+        if(instance == null) {
+            instance = new FigureObserver(figureLogic);
+        } else {
+            SingletonException singletonException = new SingletonException("Illegal attempt of singleton reinitialization");
+            LOGGER.error(singletonException.getMessage(), singletonException);
+            throw singletonException;
+        }
+    }
+
+    public static FigureObserver getInstance() {
+        if(instance != null) {
+            return instance;
+        } else {
+            SingletonException singletonException = new SingletonException("Singleton is not initialized");
+            LOGGER.error(singletonException.getMessage(), singletonException);
+            throw singletonException;
+        }
     }
 
     public FigureParameters getParameters(Integer id) {
