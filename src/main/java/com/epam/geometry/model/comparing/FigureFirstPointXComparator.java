@@ -12,6 +12,6 @@ public class FigureFirstPointXComparator implements Comparator<Figure> {
         Point secondFigurePoint = second.getPoint(0);
         double firstX = firstFigurePoint.getCoordinate(0);
         double secondX = secondFigurePoint.getCoordinate(0);
-        return (int)(firstX - secondX);
+        return Double.compare(firstX, secondX);
     }
 }
