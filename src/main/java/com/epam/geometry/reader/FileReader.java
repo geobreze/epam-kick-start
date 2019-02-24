@@ -1,4 +1,4 @@
-package com.epam.geometry.read;
+package com.epam.geometry.reader;
 
 import com.epam.geometry.exceptions.WrongDataException;
 import org.apache.logging.log4j.LogManager;

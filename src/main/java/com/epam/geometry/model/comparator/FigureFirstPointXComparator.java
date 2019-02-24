@@ -1,4 +1,4 @@
-package com.epam.geometry.model.comparing;
+package com.epam.geometry.model.comparator;
 
 import com.epam.geometry.model.Figure;
 import com.epam.geometry.model.Point;

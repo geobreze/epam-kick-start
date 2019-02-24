@@ -1,4 +1,4 @@
-package com.epam.geometry.read;
+package com.epam.geometry.reader;
 
 import com.epam.geometry.exceptions.WrongDataException;
 

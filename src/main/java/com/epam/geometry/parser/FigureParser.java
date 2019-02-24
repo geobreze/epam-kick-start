@@ -1,4 +1,4 @@
-package com.epam.geometry.parse;
+package com.epam.geometry.parser;
 
 import com.epam.geometry.model.Figure;
 

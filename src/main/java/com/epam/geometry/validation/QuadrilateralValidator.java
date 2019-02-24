@@ -3,7 +3,7 @@ package com.epam.geometry.validation;
 import com.epam.geometry.exceptions.IllegalParseException;
 import com.epam.geometry.logic.GeometryAlgorithms;
 import com.epam.geometry.model.Point;
-import com.epam.geometry.parse.PointsParser;
+import com.epam.geometry.parser.PointsParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

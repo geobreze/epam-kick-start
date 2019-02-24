@@ -1,4 +1,4 @@
-package com.epam.geometry.parse;
+package com.epam.geometry.parser;
 
 import com.epam.geometry.exceptions.IllegalParseException;
 import com.epam.geometry.generation.IdGenerator;

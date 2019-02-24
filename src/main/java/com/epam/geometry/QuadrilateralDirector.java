@@ -2,8 +2,8 @@ package com.epam.geometry;
 
 import com.epam.geometry.exceptions.WrongDataException;
 import com.epam.geometry.model.Figure;
-import com.epam.geometry.parse.FigureParser;
-import com.epam.geometry.read.Reader;
+import com.epam.geometry.parser.FigureParser;
+import com.epam.geometry.reader.Reader;
 import com.epam.geometry.validation.FigureValidator;
 import com.epam.geometry.validation.FormatValidator;
 import org.apache.logging.log4j.LogManager;
