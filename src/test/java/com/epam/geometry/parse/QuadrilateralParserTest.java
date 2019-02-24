@@ -13,10 +13,10 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 public class QuadrilateralParserTest {
+    private static final Integer ID = 0;
     private static final IdGenerator ID_GENERATOR = mock(IdGenerator.class);
     private static final PointsParser POINTS_PARSER = mock(QuadrilateralPointsParser.class);
     private static final FigureParser QUADRILATERAL_PARSER = new QuadrilateralParser(ID_GENERATOR, POINTS_PARSER);
@@ -31,7 +31,7 @@ public class QuadrilateralParserTest {
                 new Point2D(-2, -1));
         when(POINTS_PARSER.parse(anyString())).thenReturn(pointsList);
         Figure parsedQuadrilateral = new Quadrilateral(
-                ID_GENERATOR,
+                ID,
                 pointsList.get(0),
                 pointsList.get(1),
                 pointsList.get(2),

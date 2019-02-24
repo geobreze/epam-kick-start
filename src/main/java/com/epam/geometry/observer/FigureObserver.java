@@ -23,9 +23,9 @@ public class FigureObserver implements Observer {
         if(instance == null) {
             instance = new FigureObserver(figureLogic);
         } else {
-            SingletonException singletonException = new SingletonException("Illegal attempt of singleton reinitialization");
-            LOGGER.error(singletonException.getMessage(), singletonException);
-            throw singletonException;
+            String message = "Illegal attempt of singleton reinitialization";
+            LOGGER.error(message);
+            throw new SingletonException(message);
         }
     }
 
@@ -33,9 +33,9 @@ public class FigureObserver implements Observer {
         if(instance != null) {
             return instance;
         } else {
-            SingletonException singletonException = new SingletonException("Singleton is not initialized");
-            LOGGER.error(singletonException.getMessage(), singletonException);
-            throw singletonException;
+            String message = "Singleton is not initialized";
+            LOGGER.error(message);
+            throw new SingletonException(message);
         }
     }
 

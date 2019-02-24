@@ -25,12 +25,12 @@ public class QuadrilateralParser implements FigureParser {
     public Figure parse(String str) {
         try {
             List<Point> points = pointParser.parse(str);
-            Figure figure = new Quadrilateral(idGenerator, points.get(0), points.get(1), points.get(2), points.get(3));
-            return figure;
-        } catch (RuntimeException e) {
-            IllegalParseException illegalParseException = new IllegalParseException("Given shape must be quadrilateral", e);
-            LOGGER.error(illegalParseException.getMessage(), illegalParseException);
-            throw illegalParseException;
+            Integer id = idGenerator.generate();
+            return new Quadrilateral(id, points.get(0), points.get(1), points.get(2), points.get(3));
+        } catch (IndexOutOfBoundsException e) {
+            String message = "Given shape must be quadrilateral";
+            LOGGER.error(message, e);
+            throw new IllegalParseException(message);
         }
     }
 }

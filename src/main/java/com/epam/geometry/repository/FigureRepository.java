@@ -9,9 +9,9 @@ import java.util.List;
 public interface FigureRepository {
     void addFigure(Figure figure);
 
-    void removeFigure(Figure figure);
+    void removeFigure(Integer id);
 
-    void updateFigure(Figure figure);
+    void updateFigure(Integer id, Figure updatedFigure);
 
     List<Figure> query(FigureSpecification specification);
 

@@ -11,8 +11,6 @@ import org.mockito.ArgumentMatchers;
 
 import java.util.Arrays;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 public class QuadrilateralValidatorTest {
@@ -32,7 +30,7 @@ public class QuadrilateralValidatorTest {
         when(GEOMETRY_ALGORITHMS_DIFFERENT_LINE_POINTS.arePointsUnique(ArgumentMatchers.<Point>anyList())).thenReturn(true);
 
         when(POINTS_PARSER.parse(anyString())).thenReturn(Arrays.asList(
-                (Point) new Point2D(1, 1),
+                new Point2D(1, 1),
                 new Point2D(1, 1),
                 new Point2D(1, 1),
                 new Point2D(1, 1)

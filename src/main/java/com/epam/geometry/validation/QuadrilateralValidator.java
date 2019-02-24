@@ -37,8 +37,8 @@ public class QuadrilateralValidator implements FigureValidator {
             for (int j = i + 1; j < points.size(); ++j) {
                 for (int k = j + 1; k < points.size(); ++k) {
                     if (geometryAlgorithms.arePointsBelongOneLine(points.get(i), points.get(j), points.get(k))) {
-                        LOGGER.debug("These points belong one line: {}; {}; {}", points.get(i), points.get(j), points.get(k));
                         result = false;
+                        break;
                     }
                 }
             }

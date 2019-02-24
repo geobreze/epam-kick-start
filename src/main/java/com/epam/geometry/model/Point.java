@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.StringJoiner;
 
 public abstract class Point {
     private static final Logger LOGGER = LogManager.getLogger(Point.class);
@@ -23,14 +24,12 @@ public abstract class Point {
     }
 
     public double getCoordinate(int index) {
-        if (index < coordinates.size()) {
-            return coordinates.get(index);
-        } else {
-            OutOfBoundsException outOfBoundsException =
-                    new OutOfBoundsException("Point has " + coordinates.size() + "; " + index + "coordinate was requested");
-            LOGGER.error(outOfBoundsException.getMessage(), outOfBoundsException);
-            throw outOfBoundsException;
+        if(index >= coordinates.size()) {
+            String message = "Point has " + coordinates.size() + "; " + index + "coordinate was requested";
+            LOGGER.error(message);
+            throw new OutOfBoundsException(message);
         }
+        return coordinates.get(index);
     }
 
     public List<Double> getCoordinates() {
@@ -61,14 +60,11 @@ public abstract class Point {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringJoiner stringJoiner = new StringJoiner(",");
         for (double coordinate : coordinates) {
-            stringBuilder.append(coordinate).append(",");
+            stringJoiner.add(Double.toString(coordinate));
         }
-        if (',' == stringBuilder.charAt(stringBuilder.length() - 1)) {
-            stringBuilder.deleteCharAt(stringBuilder.length() - 1);
-        }
-        return stringBuilder.toString();
+        return stringJoiner.toString();
     }
 
 }

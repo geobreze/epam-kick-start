@@ -23,9 +23,7 @@ public class FileReader implements Reader {
                 lines.add(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            WrongDataException wrongDataException = new WrongDataException("File was not found", e);
-            LOGGER.error(wrongDataException.getMessage(), wrongDataException);
-            throw wrongDataException;
+            throw new WrongDataException("File was not found", e);
         }
         if (lines.isEmpty()) {
             LOGGER.warn("File has no valid lines");

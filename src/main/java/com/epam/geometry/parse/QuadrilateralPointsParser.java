@@ -27,9 +27,9 @@ public class QuadrilateralPointsParser implements PointsParser {
                 points.add(parsePoint(argument));
             }
         } catch (IllegalArgumentException e) {
-            IllegalParseException illegalParseException = new IllegalParseException("Invalid points format");
-            LOGGER.error(illegalParseException.getMessage(), illegalParseException);
-            throw illegalParseException;
+            String message = "Invalid points format";
+            LOGGER.error(message, e);
+            throw new IllegalParseException(message);
         }
         return points;
     }

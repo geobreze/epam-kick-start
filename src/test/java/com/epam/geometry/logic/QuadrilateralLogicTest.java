@@ -1,6 +1,5 @@
 package com.epam.geometry.logic;
 
-import com.epam.geometry.generation.IdGenerator;
 import com.epam.geometry.model.*;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -12,27 +11,27 @@ import static org.mockito.Mockito.when;
 
 public class QuadrilateralLogicTest {
     private static final double EPSILON = 10e-3;
-    private static final IdGenerator ID_GENERATOR = mock(IdGenerator.class);
+    private static final Integer ID = 10;
     private static final Figure TEST_TRAPEZIUM = new Quadrilateral(
-            ID_GENERATOR,
+            ID,
             new Point2D(-2, 2),
             new Point2D(3, 2),
             new Point2D(1, -1),
             new Point2D(-2, -1));
     private static final Figure TEST_SQUARE = new Quadrilateral(
-            ID_GENERATOR,
+            ID,
             new Point2D(-2, 2),
             new Point2D(1, 2),
             new Point2D(1, -1),
             new Point2D(-2, -1));
     private static final Figure TEST_RHOMB = new Quadrilateral(
-            ID_GENERATOR,
+            ID,
             new Point2D(-2, 0),
             new Point2D(0, 4),
             new Point2D(2, 0),
             new Point2D(0, -4));
     private static final Figure TEST_UNCONVEX = new Quadrilateral(
-            ID_GENERATOR,
+            ID,
             new Point2D(-1, 0),
             new Point2D(2, 0),
             new Point2D(0, -1),

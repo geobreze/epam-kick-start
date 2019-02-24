@@ -42,7 +42,7 @@ public class QuadrilateralDirector implements FigureDirector {
             }
             LOGGER.trace("Processing has completed successfully");
         } catch (WrongDataException e) {
-            LOGGER.error("Invalid filename supplied");
+            LOGGER.error("Invalid filename supplied", e);
         }
         return quadrilaterals;
     }

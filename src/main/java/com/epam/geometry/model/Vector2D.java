@@ -14,5 +14,4 @@ public class Vector2D extends Vector {
     public static Vector2D createByBeginAndEnd(Point begin, Point end) {
         return new Vector2D(begin, end);
     }
-
 }

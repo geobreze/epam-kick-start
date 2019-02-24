@@ -1,10 +1,6 @@
 package com.epam.geometry.model;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public abstract class Vector {
-    private static final Logger LOGGER = LogManager.getLogger(Point.class);
     private final Point coordinates;
 
     public Vector(Point coordinates) {
